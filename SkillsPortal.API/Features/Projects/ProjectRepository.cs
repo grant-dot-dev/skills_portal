@@ -6,10 +6,13 @@ using SkillsPortal.Core.Infrastructure.DbContext;
 
 namespace SkillsPortal.API.Features.Projects;
 
-
-
 public class ProjectRepository(SkillsContext context) : IProjectRepository
 {
+    public IQueryable<Project> Query()
+    {
+        return context.Projects.AsNoTracking();
+    }
+
     public async Task<ICollection<Project>> GetAllAsync()
     {
         return await context.Projects.ToListAsync();

@@ -1,57 +1,45 @@
 using FastEndpoints;
-using SkillsPortal.Core;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using SkillsPortal.API.Contracts;
+using SkillsPortal.API.Features.Projects.Validators;
+using SkillsPortal.API.Shared;
 using SkillsPortal.Core.Domain;
 
 namespace SkillsPortal.API.Features.Projects.Update;
 
-public class UpdateProjectEndpoint : Endpoint<UpdateProjectRequest, UpdateProjectResponse>
+public class UpdateProjectEndpoint(
+    IProjectService projectService,
+    ILogger<UpdateProjectEndpoint> logger)
+    : Endpoint<UpdateProjectRequest, UpdateProjectResponse>
 {
-    private readonly IProjectService _projectService;
-    private readonly IRelationalValidationService _validationService;
-    private readonly ILogger<UpdateProjectEndpoint> _logger;
-
-    public UpdateProjectEndpoint(
-        IProjectService projectService,
-        IRelationalValidationService validationService,
-        ILogger<UpdateProjectEndpoint> logger)
-    {
-        _projectService = projectService;
-        _validationService = validationService;
-        _logger = logger;
-    }
-
     public override void Configure()
     {
         Put("/projects/{Id:int}");
         AllowAnonymous();
-        Validator<ProjectValidator>();
+        Validator<CreateProjectValidator>();
+        Summary(s => s.Summary = "Update a project by Id from the URL, do not include Id in the body");
     }
 
     public override async Task HandleAsync(UpdateProjectRequest req, CancellationToken ct)
     {
-        _logger.LogInformation("Updating project ID {ProjectId}", req.Id);
+        var projectUpdateResult = await projectService.UpdateAsync(req);
 
-        var result = await _projectService.UpdateAsync(req);
-
-        if (!result.Success || result.Entity is null)
+        switch (projectUpdateResult)
         {
-            foreach (var error in result.Errors)
+            case ServiceResult<Project>.Failure failure:
             {
-                AddError(error);
-                _logger.LogError("Project creation failed: {Error}", error);
+                foreach (var error in failure.Errors)
+                {
+                    AddError(error);
+                }
+
+                logger.LogError("Project update failed: {Errors}", string.Join(", ", failure.Errors));
+                await Send.ErrorsAsync(failure.ErrorType.MapErrorToStatusCode(), ct);
+                return;
             }
-
-            await Send.ErrorsAsync(500, ct);
-            return;
+            case ServiceResult<Project>.Success success:
+                await Send.OkAsync(success.Entity.MapToUpdateResponse(FakeUsers.Admin), ct);
+                return;
         }
-
-        var user = new User()
-        {
-            Id = 1,
-            Name = "Grant Test", Email = "grant@test.com", Level = 4,
-            StartDate = new DateTimeOffset(DateTime.UtcNow, TimeSpan.Zero),
-        };
-
-        await Send.OkAsync(result.Entity.MapToResponse(user), ct);
     }
 }

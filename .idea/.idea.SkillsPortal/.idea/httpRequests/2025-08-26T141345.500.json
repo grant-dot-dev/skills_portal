@@ -1,0 +1,9 @@
+{
+  "statusCode": 500,
+  "message": "One or more errors occurred!",
+  "errors": {
+    "generalErrors": [
+      "User with Id 1 was not found"
+    ]
+  }
+}

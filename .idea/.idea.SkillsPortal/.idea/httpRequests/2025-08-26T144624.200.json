@@ -1,0 +1,15 @@
+{
+  "id": 3,
+  "name": "New Project",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier",
+  "createdOn": "2025-08-26T13:46:24.505437+00:00",
+  "createdBy": {
+    "id": 1,
+    "name": "Grant Test",
+    "startDate": "2024-01-01",
+    "level": "4"
+  },
+  "users": [],
+  "requiredSkillIds": []
+}

@@ -1,0 +1,6 @@
+{
+  "status": "Internal Server Error!",
+  "code": 500,
+  "reason": "The type initializer for 'FastEndpoints.RequestBinder`1' threw an exception.",
+  "note": "See application log for stack trace."
+}

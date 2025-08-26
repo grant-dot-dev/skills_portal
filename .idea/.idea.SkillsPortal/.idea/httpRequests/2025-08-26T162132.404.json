@@ -1,0 +1,11 @@
+{
+  "statusCode": 404,
+  "message": "One or more errors occurred!",
+  "errors": {
+    "generalErrors": [
+      "User with Id 1 was not found",
+      "User with Id 2 was not found",
+      "User with Id 10 was not found"
+    ]
+  }
+}

@@ -1,48 +1,42 @@
 using FastEndpoints;
+using SkillsPortal.API.Contracts;
+using SkillsPortal.API.Features.Projects.Validators;
+using SkillsPortal.Core.Domain;
 
 namespace SkillsPortal.API.Features.Projects.Create;
 
 public class CreateProjectEndpoint(IProjectService projectService, ILogger<CreateProjectEndpoint> logger)
-    : Endpoint<CreateProjectRequest, ProjectResponse>
+    : Endpoint<CreateProjectRequest, CreateProjectResponse>
 {
     public override void Configure()
     {
         Post("/projects");
         AllowAnonymous();
-        DontCatchExceptions();
-        Validator<ProjectValidator>();
+        Validator<CreateProjectValidator>();
     }
 
     public override async Task HandleAsync(CreateProjectRequest req, CancellationToken ct)
     {
         logger.LogInformation("Received request to create a new project: {RequestName}", req.Name);
 
-        try
-        {
-            var project = req.MapToEntity();
-            var result = await projectService.CreateAsync(project);
+        var result = await projectService.CreateAsync(req);
 
-            if (!result.Success)
-            {
-                foreach (var error in result.Errors)
+        switch (result)
+        {
+            case ServiceResult<Project>.Failure failedResult:
+                foreach (var error in failedResult.Errors)
+                {
                     AddError(error);
+                }
 
-                await Send.ErrorsAsync(500, ct);
-                return; // <-- early return
-            }
+                await Send.ErrorsAsync(400, ct);
+                return;
 
-            if (result.Entity is { } entity)
-            {
-                var response = entity.MapToResponse();
-                logger.LogInformation("Successfully created project with ID: {ProjectId}", entity.Id);
+            case ServiceResult<Project>.Success successResult:
+                var response = successResult.Entity.MapToCreateResponse(FakeUsers.Admin);
+                logger.LogInformation("Successfully created project with ID: {ProjectId}", successResult.Entity.Id);
                 await Send.OkAsync(response, ct);
-            }
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "An error occurred while creating project: {RequestName}", req.Name);
-            AddError(ex.Message);
-            await Send.ErrorsAsync(400, ct);
+                return;
         }
     }
 }

@@ -1,0 +1,9 @@
+{
+  "statusCode": 500,
+  "message": "One or more errors occurred!",
+  "errors": {
+    "generalErrors": [
+      "Project with ID 0 not found."
+    ]
+  }
+}

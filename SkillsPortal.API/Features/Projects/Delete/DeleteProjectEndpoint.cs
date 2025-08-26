@@ -1,4 +1,6 @@
 using FastEndpoints;
+using SkillsPortal.API.Contracts;
+using SkillsPortal.API.Features.Projects.Validators;
 
 namespace SkillsPortal.API.Features.Projects.Delete;
 
@@ -8,25 +10,31 @@ public class DeleteProjectEndpoint(IProjectService projectService, ILogger<Delet
     public override void Configure()
     {
         Delete("/projects/{Id:int}");
+        Validator<DeleteValidator>();
         AllowAnonymous();
         DontCatchExceptions();
     }
 
     public override async Task HandleAsync(DeleteProjectRequest req, CancellationToken ct)
     {
-        logger.LogInformation("Deleting project with ID: {ProjectId}", req.ProjectId);
+        logger.LogInformation("Deleting project with ID: {ProjectId}", req.Id);
 
-        var result = await projectService.DeleteAsync(req.ProjectId);
+        var result = await projectService.DeleteAsync(req.Id);
 
-        if (!result.Success)
+        switch (result)
         {
-            foreach (var error in result.Errors)
-                AddError(error);
+            case ServiceResult<bool>.Failure failedResult:
+                foreach (var error in failedResult.Errors)
+                {
+                    AddError(error);
+                }
 
-            await Send.ErrorsAsync(500, ct);
-            return;
+                await Send.ErrorsAsync(400, ct);
+                return;
+
+            case ServiceResult<bool>.Success:
+                await Send.OkAsync(new DeleteProjectResponse(true), ct);
+                return;
         }
-
-        await Send.OkAsync(new DeleteProjectResponse(true), ct);
     }
 }

@@ -1,26 +1,57 @@
 using FastEndpoints;
+using Microsoft.EntityFrameworkCore;
+using SkillsPortal.API.Features.Employees;
 using SkillsPortal.API.Features.Projects;
-using SkillsPortal.Core;
+using SkillsPortal.API.Features.Skills;
+using SkillsPortal.API.Middleware;
+using SkillsPortal.API.Shared;
 using SkillsPortal.Core.Infrastructure.DbContext;
 
-var builder = WebApplication.CreateBuilder(args);
+namespace SkillsPortal.API;
 
-builder.Services.AddOpenApi();
-builder.Services.AddDbContext<SkillsContext>();
-builder.Services.AddScoped<IRelationalValidationService, RelationalValidationService>();
-builder.Services.AddFastEndpoints();
-
-builder.Services.AddSingleton<IProjectRepository, ProjectRepository>();
-builder.Services.AddSingleton<IProjectService, ProjectService>();
-
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
+public abstract class Program
 {
-    app.MapOpenApi();
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+
+// configure built-in logging
+        builder.Logging.ClearProviders();
+        builder.Logging.AddConsole();
+        builder.Logging.AddDebug();
+        builder.Logging.AddSimpleConsole(options => options.SingleLine = true);
+
+        builder.Services.AddFastEndpoints();
+        builder.Services.AddOpenApi();
+        builder.Services.AddDbContext<SkillsContext>(options =>
+            options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+        builder.Services.AddScoped<IRelationalValidationService, RelationalValidationService>();
+
+
+        builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<ISkillsRepository, SkillsRepository>();
+        builder.Services.AddScoped<IProjectService, ProjectService>();
+
+        var app = builder.Build();
+
+        app.UseMiddleware<RequestLoggingMiddleware>();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.MapOpenApi();
+        }
+
+        app.UseDefaultExceptionHandler()
+            .UseFastEndpoints(c =>
+            {
+                c.Endpoints.RoutePrefix = "api";
+                c.Errors.GeneralErrorsField = "errors";
+            });
+
+        app.UseHttpsRedirection();
+
+        app.Run();
+    }
 }
-
-app.UseDefaultExceptionHandler()
-    .UseFastEndpoints();
-
-app.UseHttpsRedirection();

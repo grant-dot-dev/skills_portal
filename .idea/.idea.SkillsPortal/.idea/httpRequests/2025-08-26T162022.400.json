@@ -1,0 +1,9 @@
+{
+  "statusCode": 400,
+  "message": "One or more errors occurred!",
+  "errors": {
+    "serializerErrors": [
+      "JSON deserialization for type 'SkillsPortal.API.Features.Projects.Update.UpdateProjectRequest' was missing required properties including: 'id'."
+    ]
+  }
+}

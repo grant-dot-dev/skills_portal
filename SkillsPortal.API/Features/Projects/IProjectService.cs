@@ -1,3 +1,4 @@
+using SkillsPortal.API.Contracts;
 using SkillsPortal.API.Features.Projects.Create;
 using SkillsPortal.API.Features.Projects.Update;
 using SkillsPortal.Core.Domain;
@@ -8,7 +9,7 @@ public interface IProjectService
 {
     // Queries
     Task<ServiceResult<ICollection<Project>>> GetAllAsync();
-    Task<ServiceResult<Project?>> GetByIdAsync(int id);
+    Task<ServiceResult<Project>> GetByIdAsync(int id);
 
     // Commands
     Task<ServiceResult<Project>> CreateAsync(CreateProjectRequest project);

@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using SkillsPortal.API.Features.Employees;
+using SkillsPortal.API.Contracts;
 using SkillsPortal.API.Features.Projects.Create;
 using SkillsPortal.API.Features.Projects.Update;
-using SkillsPortal.API.Features.Skills;
-using SkillsPortal.Core;
+using SkillsPortal.API.Shared;
 using SkillsPortal.Core.Domain;
 
 namespace SkillsPortal.API.Features.Projects;
@@ -11,158 +10,151 @@ namespace SkillsPortal.API.Features.Projects;
 public class ProjectService(
     IProjectRepository repository,
     IRelationalValidationService validationService,
-    IUserRepository userRepository,
-    ISkillsRepository skillsRepository,
-    ILogger logger) : IProjectService
+    ILogger<ProjectService> logger) : IProjectService
 {
-    // Queries
     public async Task<ServiceResult<ICollection<Project>>> GetAllAsync()
     {
         try
         {
-            var results = await repository.GetAllAsync();
-            return new ServiceResult<ICollection<Project>>()
-            {
-                Success = true,
-                Entity = results
-            };
+            var projects = await repository.GetAllAsync();
+            return new ServiceResult<ICollection<Project>>.Success(projects);
         }
         catch (Exception ex)
         {
-            return new ServiceResult<ICollection<Project>>()
-            {
-                Success = false,
-                Errors = [ex.Message],
-                Entity = null,
-            };
+            logger.LogError(ex, "Failed to retrieve all projects");
+            return new ServiceResult<ICollection<Project>>.Failure(
+                ["Failed to retrieve projects."],
+                ErrorType.Database
+            );
         }
     }
 
-    public async Task<ServiceResult<Project?>> GetByIdAsync(int id)
+    public async Task<ServiceResult<Project>> GetByIdAsync(int id)
     {
         try
         {
-            var result = await repository.GetByIdAsync(id);
-            return new ServiceResult<Project?>()
-            {
-                Success = true,
-                Entity = result
-            };
+            var project = await repository.GetByIdAsync(id);
+            if (project == null)
+                return new ServiceResult<Project>.Failure(
+                    [$"Project with ID {id} not found."],
+                    ErrorType.NotFound
+                );
+
+            return new ServiceResult<Project>.Success(project);
         }
         catch (Exception ex)
         {
-            return new ServiceResult<Project?>()
-            {
-                Success = false,
-                Errors = [ex.Message],
-                Entity = null,
-            };
+            logger.LogError(ex, "Failed to retrieve project {ProjectId}", id);
+            return new ServiceResult<Project>.Failure(
+                ["Failed to retrieve project."],
+                ErrorType.Database
+            );
         }
     }
 
-    // Commands
-    public async Task<ServiceResult<Project>> CreateAsync(CreateProjectRequest project)
+    public async Task<ServiceResult<Project>> CreateAsync(CreateProjectRequest request)
     {
         try
         {
-            var entity = project.MapToEntity();
-            await repository.AddAsync(entity);
+            var project = request.MapToEntity();
+            await repository.AddAsync(project);
             await repository.SaveChangesAsync();
 
-            return new ServiceResult<Project>
-            {
-                Entity = entity,
-                Success = true,
-            };
+            return new ServiceResult<Project>.Success(project);
         }
         catch (DbUpdateException ex)
         {
-            return new ServiceResult<Project>
-            {
-                Success = false,
-                Errors =
-                [
-                    $"Failed to create project: {ex.Message}"
-                ],
-                Entity = null,
-            };
-        }
-        catch (Exception ex)
-        {
-            return new ServiceResult<Project>
-            {
-                Success = false,
-                Errors = [$"An unexpected error occurred: {ex.Message}"],
-                Entity = null,
-            };
+            logger.LogError(ex, "Database error while creating project {ProjectName}", request.Name);
+            return new ServiceResult<Project>.Failure(
+                [$"Failed to create project: {ex.Message}"],
+                ErrorType.Database
+            );
         }
     }
 
-
-    public async Task<ServiceResult<Project>> UpdateAsync(UpdateProjectRequest project)
+    public async Task<ServiceResult<Project>> UpdateAsync(UpdateProjectRequest request)
     {
-        var loadedProject = await repository.GetByIdAsync(project.Id);
-        if (loadedProject == null)
-            return new ServiceResult<Project> { Success = false, Errors = [$"Project with {project.Id}: Not found"] };
+        // Step 1: Validate the request and fetch the existing project.
+        var projectResult = await GetByIdAsync(request.Id);
 
-        // Validate users exist
-        var users = userRepository.Query();
-        var skills = skillsRepository.Query();
-
-        var (validUsers, userErrors) = await validationService.ResolveEntitiesAsync(users, project.UserIds);
-        var (validSkills, skillErrors) = await validationService.ResolveEntitiesAsync(skills, project.SkillIds);
-
-        var allErrors = userErrors.Concat(skillErrors).ToList();
-        if (allErrors.Count != 0)
-            return new ServiceResult<Project> { Success = false, Errors = allErrors.ToArray() };
-
-        // Update project properties
-        loadedProject.Name = project.Name;
-        loadedProject.Client = project.Client;
-        loadedProject.Description = project.Description;
-
-        // Update relationships
-        loadedProject.Users.Clear();
-        foreach (var user in validUsers)
+        if (projectResult is ServiceResult<Project>.Failure failedProjectLookup)
         {
-            loadedProject.Users.Add(user);
+            return failedProjectLookup;
         }
+
+        logger.LogInformation("Updating project ID {ProjectId}", request.Id);
+
+        // Step 2: Perform relational validation for users and skills.
+        var validationResult = await validationService.ValidateRelationalProperties(
+            new RelationalValidationRequest(request.UserIds, request.SkillIds));
+
+        if (validationResult is ServiceResult<CombinedValidationResponse>.Failure failure)
+        {
+            return new ServiceResult<Project>.Failure(failure.Errors, failure.ErrorType);
+        }
+
+        // Step 3: All validation passed. Proceed with updating the project entity.
+        var loadedProject = ((ServiceResult<Project>.Success)projectResult).Entity;
+        var entities = ((ServiceResult<CombinedValidationResponse>.Success)validationResult).Entity;
+
+        loadedProject.Name = request.Name;
+        loadedProject.Client = request.Client;
+        loadedProject.Description = request.Description;
+
+        // Update the relational collections (users and skills).
+        loadedProject.Users.Clear();
+        foreach (var user in entities.Users)
+            loadedProject.Users.Add(user);
 
         loadedProject.RequiredSkills.Clear();
-        foreach (var skill in validSkills)
-        {
+        foreach (var skill in entities.Skills)
             loadedProject.RequiredSkills.Add(skill);
-        }
 
         try
         {
             await repository.SaveChangesAsync();
-            return new ServiceResult<Project> { Success = true, Entity = loadedProject };
+            return new ServiceResult<Project>.Success(loadedProject);
+        }
+        catch (DbUpdateConcurrencyException ex)
+        {
+            logger.LogWarning(ex, "Concurrency conflict while updating project {ProjectId}", request.Id);
+            return new ServiceResult<Project>.Failure(
+                ["Project was updated by another user. Please reload and try again."],
+                ErrorType.Conflict
+            );
         }
         catch (DbUpdateException ex)
         {
-            return new ServiceResult<Project> { Success = false, Errors = [ex.Message] };
+            logger.LogError(ex, "Database error while updating project {ProjectId}", request.Id);
+            return new ServiceResult<Project>.Failure(
+                [$"Failed to update project: {ex.Message}"],
+                ErrorType.Database
+            );
         }
     }
-
 
     public async Task<ServiceResult<bool>> DeleteAsync(int id)
     {
-        var projectToDelete = await repository.GetByIdAsync(id);
-        if (projectToDelete == null)
+        var projectResult = await GetByIdAsync(id);
+
+        if (projectResult is ServiceResult<Project>.Failure failure)
         {
-            return new ServiceResult<bool> { Success = false, Errors = [$"Project with {id}: Not found"] };
+            return new ServiceResult<bool>.Failure(failure.Errors, failure.ErrorType);
         }
 
         try
         {
             await repository.DeleteAsync(id);
             await repository.SaveChangesAsync();
-            return new ServiceResult<bool> { Success = true, Entity = true };
+            return new ServiceResult<bool>.Success(true);
         }
         catch (DbUpdateException ex)
         {
-            return new ServiceResult<bool> { Success = false, Errors = [ex.Message] };
+            logger.LogError(ex, "Database error while deleting project {ProjectId}", id);
+            return new ServiceResult<bool>.Failure(
+                [$"Failed to delete project: {ex.Message}"],
+                ErrorType.Database
+            );
         }
     }
 }
