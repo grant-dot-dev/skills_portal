@@ -1,7 +1,9 @@
 using FastEndpoints;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using SkillsPortal.API.Features.Employees;
 using SkillsPortal.API.Features.Projects;
+using SkillsPortal.API.Features.Projects.Validators;
 using SkillsPortal.API.Features.Skills;
 using SkillsPortal.API.Middleware;
 using SkillsPortal.API.Shared;
@@ -32,7 +34,10 @@ public abstract class Program
         builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
         builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<ISkillsRepository, SkillsRepository>();
+        builder.Services.AddScoped<CreateProjectValidator>();
         builder.Services.AddScoped<IProjectService, ProjectService>();
+
+        builder.Services.AddValidatorsFromAssemblyContaining<CreateProjectValidator>();
 
         var app = builder.Build();
 

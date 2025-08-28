@@ -1,0 +1,15 @@
+{
+  "id": 5,
+  "name": "Looney Todddons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier",
+  "createdOn": "2025-08-28T15:26:21.894927+00:00",
+  "createdBy": {
+    "id": 1,
+    "name": "Grant Test",
+    "startDate": "2024-01-01",
+    "level": "4"
+  },
+  "users": [],
+  "requiredSkillIds": []
+}

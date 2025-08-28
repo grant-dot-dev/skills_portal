@@ -10,9 +10,8 @@ public class DeleteProjectEndpoint(IProjectService projectService, ILogger<Delet
     public override void Configure()
     {
         Delete("/projects/{Id:int}");
-        Validator<DeleteValidator>();
         AllowAnonymous();
-        DontCatchExceptions();
+        Validator<DeleteValidator>();
     }
 
     public override async Task HandleAsync(DeleteProjectRequest req, CancellationToken ct)

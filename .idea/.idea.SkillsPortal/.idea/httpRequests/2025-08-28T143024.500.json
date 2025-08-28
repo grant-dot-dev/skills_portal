@@ -1,6 +1,0 @@
-{
-  "status": "Internal Server Error!",
-  "code": 500,
-  "reason": "28P01: password authentication failed for user \"postgres\"",
-  "note": "See application log for stack trace."
-}

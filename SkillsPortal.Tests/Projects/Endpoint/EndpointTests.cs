@@ -3,6 +3,7 @@ using FastEndpoints;
 using FastEndpoints.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
+using NSubstitute.Core;
 using Xunit;
 using SkillsPortal.API.Contracts;
 using SkillsPortal.API.Features.Projects;
@@ -15,11 +16,13 @@ namespace SkillsPortal.Tests.Projects.Endpoint;
 public class ProjectAppFixture : AppFixture<API.Program>
 {
     public IProjectService? MockProjectService { get; set; }
+    public IProjectRepository MockProjectRepository { get; set; }
 
     protected override void ConfigureServices(IServiceCollection services)
     {
         // Create the mock
         MockProjectService = Substitute.For<IProjectService>();
+        MockProjectRepository = Substitute.For<IProjectRepository>();
 
         // Override the IProjectService with our mock for all tests
         services.AddScoped(_ => MockProjectService);
@@ -75,12 +78,18 @@ public class CreateEndpointTests(ProjectAppFixture app) : TestBase<ProjectAppFix
             Description = "Fails validation"
         };
 
-        var errors = new[] { "Project name already exists" };
+        var errors = new[] { "Database connection failure" };
+        var projects = new List<Project>
+        {
+            new Project { Id = 2, Name = "Test2" }
+        }.AsQueryable();
 
         // Mock service to return a failure result
         app.MockProjectService?
             .CreateAsync(Arg.Any<CreateProjectRequest>())
-            .Returns(ServiceResult<Project>.FromFailure(errors, ErrorType.Validation));
+            .Returns(ServiceResult<Project>.FromFailure(errors, ErrorType.Database));
+
+        app.MockProjectRepository.Query().Returns(projects);
 
         // Act
         var (http, response) =
@@ -89,6 +98,8 @@ public class CreateEndpointTests(ProjectAppFixture app) : TestBase<ProjectAppFix
         // Assert
         Assert.Equal(HttpStatusCode.BadRequest, http.StatusCode);
         Assert.NotNull(response);
-        Assert.Contains("Project name already exists", response.Errors);
+
+        var allErrors = response.Errors.SelectMany(kv => kv.Value).ToList();
+        Assert.Contains("Database connection failure", allErrors);
     }
 }

@@ -12,20 +12,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4a5aefc-bcc4-4d73-a3fc-936589a294c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SkillsPortal.API/Contracts/CombinedValidationResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SkillsPortal.API/Contracts/RelationalValidationRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SkillsPortal.Tests/Projects/Endpoint/EndpointTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SkillsPortal.Tests/Projects/FakeProjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T140845.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T141322.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T141345.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T141809.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T143309.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T143322.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T144434.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T144624.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T144627.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T144649.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T145241.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T145250.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T160000.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T160140.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T160321.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T160556.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T160642.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T160857.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T161120.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T161203.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T162022.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T162132.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T162355.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T163537.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T163655.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T163703.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T163714.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T180627.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T180642.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T180653.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-26T181447.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-28T092023.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-28T092025.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-28T092054.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-28T142627.400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/2025-08-28T143024.500.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SkillsPortal/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/IProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/IProjectService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/ProjectMapperExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/ProjectMapperExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/ProjectService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/ProjectService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Update/UpdateProjectEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Update/UpdateProjectEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Delete/DeleteProjectEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Delete/DeleteProjectEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Validators/CreateProjectValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Validators/CreateProjectValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Shared/IRelationalValidationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Shared/IRelationalValidationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/Shared/RelationalValidationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/Shared/RelationalValidationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkillsPortal.API/SkillsPortal.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/SkillsPortal.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkillsPortal.API/api.http" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.API/api.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkillsPortal.Core/Infrastructure/DbContext/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.Core/Infrastructure/DbContext/DbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkillsPortal.Tests/Projects/Endpoint/EndpointTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.Tests/Projects/Endpoint/EndpointTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SkillsPortal.Tests/SkillsPortal.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SkillsPortal.Tests/SkillsPortal.Tests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +71,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30024e3819da4e6f9deacb6636b349b84a200/e3/b2904b6d/ErrorResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/21c12b75b72ded3579a2533dad7d6ecc6997b19ffd5a7daf7a3bba1c381f53a/TaskContinuation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2280f6b68568823fe54b6fb0be31b9cbce4c9aa7882ea9482c7f66bc84f4930/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/62c944bd1ce5cdba36749b2bb2c97e8763ad8a838ecacc9646a9e6c98a7e6c22/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8120ef112d908a910f1fcc3d2a72607c747e89d0152b438d2cdbd2ce73bd/RuleComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a47a457a831e060393bb80e055c6a98d7de44980f010613b49be6783b4551f/ReflectionTypeLoadException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5ace92664429b8b34b68b587316fb211811b58aeb53422b43cecca2ad2bdaf3/AsyncTaskMethodBuilderT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SkillsPortal.Tests/Projects/Endpoint/EndpointTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SkillsPortal.Tests/Projects/FakeProjects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/9.0.101/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props" root0="FORCE_HIGHLIGHTING" />
@@ -71,6 +108,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.SkillsPortal.API: http.executor": "Run",
+    "51dd76d3-330b-4560-96d3-50678a1414fc.executor": "Debug",
     "HTTP Request.api | #1.executor": "Run",
     "HTTP Request.api | #2.executor": "Run",
     "HTTP Request.api | #3.executor": "Run",
@@ -194,10 +232,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.api | #4" />
         <item itemvalue="HTTP Request.api | #2" />
         <item itemvalue="HTTP Request.api | #3" />
         <item itemvalue="HTTP Request.api | #1" />
-        <item itemvalue="HTTP Request.api | #4" />
         <item itemvalue="HTTP Request.rest-api | #3" />
       </list>
     </recent_temporary>
@@ -234,6 +272,38 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Validators/CreateProjectValidator.cs</url>
+          <line>21</line>
+          <properties documentPath="$PROJECT_DIR$/SkillsPortal.API/Features/Projects/Validators/CreateProjectValidator.cs" containingFunctionPresentation="Lambda expression inside Constructor 'CreateProjectValidator'">
+            <startOffsets>
+              <option value="732" />
+            </startOffsets>
+            <endOffsets>
+              <option value="773" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SkillsPortal.Tests/Projects/Endpoint/EndpointTests.cs</url>
+          <line>94</line>
+          <properties documentPath="$PROJECT_DIR$/SkillsPortal.Tests/Projects/Endpoint/EndpointTests.cs" containingFunctionPresentation="Method 'CreateProject_Should_Return_BadRequest_When_Failed'">
+            <startOffsets>
+              <option value="2964" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3095" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

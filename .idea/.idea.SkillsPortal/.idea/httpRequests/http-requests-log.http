@@ -1,3 +1,186 @@
+DELETE http://localhost:5073/api/projects/2
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-08-28T163915.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 102
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Todddons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162816.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 102
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Todddons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162742.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 102
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Todddons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162625.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 102
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Todddons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162621.200.json
+
+###
+
+PUT http://localhost:5073/api/projects/4
+Content-Type: application/json
+Content-Length: 98
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Project New",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162613.200.json
+
+###
+
+PUT http://localhost:5073/api/projects/10
+Content-Type: application/json
+Content-Length: 98
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Project New",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162608.404.json
+
+###
+
+DELETE http://localhost:5073/api/projects/2
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-08-28T162400.200.json
+
+###
+
+DELETE http://localhost:5073/api/projects/2
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-08-28T162308.400.json
+
+###
+
+DELETE http://localhost:5073/api/projects/2
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-08-28T162120.500.json
+
+###
+
+DELETE http://localhost:5073/api/projects/2
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-08-28T162056.500.json
+
+###
+
+DELETE http://localhost:5073/api/projects/2
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-08-28T162051.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 102
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Todddons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T162021.200.json
+
+###
+
 POST http://localhost:5073/api/projects
 Content-Type: application/json
 Content-Length: 99
@@ -11,720 +194,619 @@ Accept: */*
   "description": "Cartoon weaponry supplier"
 }
 
-<> 2025-08-28T143024.500.json
+<> 2025-08-28T162016.400.json
 
 ###
 
 POST http://localhost:5073/api/projects
 Content-Type: application/json
-Content-Length: 87
+Content-Length: 99
 User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "name": "",
+  "name": "LooneyToeons",
   "client": "Acme Corp",
   "description": "Cartoon weaponry supplier"
 }
 
-<> 2025-08-28T142627.400.json
+<> 2025-08-28T161918.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "LooneyToeons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T161914.200.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 100
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toeons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T161900.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T161853.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T161852.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T161851.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T161849.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T160340.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T160339.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T160332.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155426.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155417.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155245.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155244.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155243.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155241.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155132.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155131.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T155128.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T154956.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T154323.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T154322.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T154318.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153934.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153932.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153931.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153930.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153926.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153712.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153707.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T153452.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T152925.500.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T152923.400.json
+
+###
+
+POST http://localhost:5073/api/projects
+Content-Type: application/json
+Content-Length: 99
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Looney Toons",
+  "client": "Acme Corp",
+  "description": "Cartoon weaponry supplier"
+}
+
+<> 2025-08-28T152740.500.json
 
 ###
 
 PUT http://localhost:5073/api/projects/10
 Content-Type: application/json
-Content-Length: 100
+Content-Length: 98
 User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "name": "Project - New",
+  "name": "Project New",
   "client": "Acme Corp",
   "description": "Cartoon weaponry supplier"
 }
 
-<> 2025-08-28T092054.500.json
+<> 2025-08-28T152726.500.json
 
 ###
 
 POST http://localhost:5073/api/projects
 Content-Type: application/json
-Content-Length: 87
+Content-Length: 99
 User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 {
-  "name": "",
+  "name": "Looney Toons",
   "client": "Acme Corp",
   "description": "Cartoon weaponry supplier"
 }
 
-<> 2025-08-28T092025.400.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 87
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.3.7
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-28T092023.400.json
-
-###
-
-GET http://localhost:5073/api/projects
-Accept: application/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-
-<> 2025-08-26T181447.200.json
-
-###
-
-DELETE http://localhost:5073/api/projects/5
-Content-Type: applicaiton/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-08-26T180653.200.json
-
-###
-
-PUT http://localhost:5073/api/projects/5
-Content-Type: application/json
-Content-Length: 100
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T180642.200.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 98
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - G",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T180627.200.json
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 100
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T163714.500.json
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 117
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": []
-}
-
-<> 2025-08-26T163703.500.json
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 117
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": []
-}
-
-<> 2025-08-26T163655.500.json
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 141
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T163537.404.json
-
-###
-
-PUT http://localhost:5073/api/projects/
-Content-Type: application/json
-Content-Length: 141
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 141
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T162355.404.json
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 141
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T162132.404.json
-
-###
-
-PUT http://localhost:5073/api/projects/4
-Content-Type: application/json
-Content-Length: 141
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T162022.400.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 152
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 4,
-  "name": "Project - New",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T161203.404.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 98
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "Project - G",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T161120.200.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 87
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T160857.400.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 87
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T160642.500.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 87
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T160556.500.json
-
-###
-
-DELETE http://localhost:5073/api/projects/1
-Content-Type: applicaiton/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-08-26T160321.200.json
-
-###
-
-DELETE http://localhost:5073/api/projects/1
-Content-Type: applicaiton/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-08-26T160140.500.json
-
-###
-
-DELETE http://localhost:5073/api/projects/1
-Content-Type: applicaiton/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2025-08-26T160000.500.json
-
-###
-
-DELETE http://localhost:5073/api/1
-Content-Type: applicaiton/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-DELETE http://localhost:5073/api/delete/1
-Content-Type: applicaiton/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 155
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "New project name",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T145250.404.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 139
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1,
-    2,
-    10
-  ]
-}
-
-<> 2025-08-26T145241.400.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 124
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T144649.400.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 135
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T144627.404.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 98
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T144624.200.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 135
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T144434.404.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 135
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T143322.500.json
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 98
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T143309.200.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 110
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T141809.400.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 135
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "id": 1,
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T141345.500.json
-
-###
-
-PUT http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 124
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-<> 2025-08-26T141322.400.json
-
-###
-
-POST http://localhost:5073/api/projects/1
-Content-Type: application/json
-Content-Length: 124
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier",
-  "userIds": [
-    1
-  ]
-}
-
-###
-
-POST http://localhost:5073/api/projects
-Content-Type: application/json
-Content-Length: 98
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "name": "New Project",
-  "client": "Acme Corp",
-  "description": "Cartoon weaponry supplier"
-}
-
-<> 2025-08-26T140845.200.json
-
-###
-
-GET http://localhost:5073/api/projects
-Accept: application/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-
-###
-
-GET http://localhost:5073/api/projects
-Accept: application/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-
-###
-
-GET http://localhost:5073/api/projects
-Accept: application/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
-
-###
-
-GET http://localhost:5001/api/projects
-Accept: application/json
-User-Agent: IntelliJ HTTP Client/JetBrains Rider 2025.1.2
-Accept-Encoding: br, deflate, gzip, x-gzip
+<> 2025-08-28T152715.400.json
 
 ###
 

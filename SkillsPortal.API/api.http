@@ -6,26 +6,25 @@ POST http://localhost:5073/api/projects
 Content-Type: application/json
 
 {
-  "name": "Looney Toons",
+  "name": "Looney Todddons",
   "client": "Acme Corp",
   "description": "Cartoon weaponry supplier"
 }
 
 
 ###
-PUT http://localhost:5073/api/projects/10
+PUT http://localhost:5073/api/projects/4
 Content-Type: application/json
 
 {
-  "name": "Project - New",
+  "name": "Project New",
   "client": "Acme Corp",
   "description": "Cartoon weaponry supplier"
 }
 
 
 ###
-DELETE localhost:5073/api/projects/5
-Content-Type: application/json
+DELETE localhost:5073/api/projects/2
 
 
 

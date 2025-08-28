@@ -1,9 +1,0 @@
-{
-  "statusCode": 500,
-  "message": "One or more errors occurred!",
-  "errors": {
-    "generalErrors": [
-      "Failed to retrieve project."
-    ]
-  }
-}

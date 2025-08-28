@@ -3,7 +3,7 @@ using SkillsPortal.Core.Domain;
 
 namespace SkillsPortal.Core.Infrastructure.DbContext;
 
-public class SkillsContext(DbContextOptions<SkillsContext> options) : 
+public class SkillsContext(DbContextOptions<SkillsContext> options) :
     Microsoft.EntityFrameworkCore.DbContext(options)
 {
     public DbSet<User> Users { get; set; }
@@ -26,5 +26,9 @@ public class SkillsContext(DbContextOptions<SkillsContext> options) :
         modelBuilder.Entity<Project>()
             .HasMany(p => p.RequiredSkills)
             .WithMany(s => s.Projects);
+
+        modelBuilder.Entity<Project>()
+            .HasIndex(u => u.Name)
+            .IsUnique();
     }
 }

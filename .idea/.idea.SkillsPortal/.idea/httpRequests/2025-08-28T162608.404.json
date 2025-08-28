@@ -1,0 +1,9 @@
+{
+  "statusCode": 404,
+  "message": "One or more errors occurred!",
+  "errors": {
+    "errors": [
+      "Project with ID 10 not found."
+    ]
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "status": "Internal Server Error!",
-  "code": 500,
-  "reason": "Specified argument was out of the range of valid values.",
-  "note": "See application log for stack trace."
-}

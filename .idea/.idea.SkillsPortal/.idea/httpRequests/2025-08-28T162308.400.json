@@ -1,0 +1,9 @@
+{
+  "statusCode": 400,
+  "message": "One or more errors occurred!",
+  "errors": {
+    "serializerErrors": [
+      "The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0."
+    ]
+  }
+}

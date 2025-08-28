@@ -1,0 +1,6 @@
+{
+  "status": "Internal Server Error!",
+  "code": 500,
+  "reason": "The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.",
+  "note": "See application log for stack trace."
+}
